@@ -224,7 +224,8 @@ test.jvmArgs(['-ea',
               '--add-opens', 'java.base/java.time=ALL-UNNAMED',
               '--add-opens', 'java.base/java.util.concurrent.atomic=ALL-UNNAMED',
               '--add-opens', 'java.base/java.util=ALL-UNNAMED',
-              '--add-opens', 'java.base/jdk.internal.reflect=ALL-UNNAMED'])
+              '--add-opens', 'java.base/jdk.internal.reflect=ALL-UNNAMED',
+              '-Dcom.rits.cloning.Fields.accessor=HANDLES'])
 
 // Tell Java 23+ not to warn about use of sun.misc.Unsafe (in cloning library).
 // On older versions of Java, this option causes an error, so we omit it there.
